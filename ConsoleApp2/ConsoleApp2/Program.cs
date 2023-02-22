@@ -13,7 +13,59 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            Random random = new Random();
+            do
+            {
+                double num1 = 0;
+                double num2 = 0;
+                double result = 0;
+
+                Console.WriteLine("------------------");
+                Console.WriteLine("Calculator Program");
+                Console.WriteLine("------------------");
+
+                Console.WriteLine("Enter number 1 : ");
+                num1 = Convert.ToDouble(Console.ReadLine());
+
+                Console.WriteLine("Enter number 2 : ");
+                num2 = Convert.ToDouble(Console.ReadLine());
+
+                Console.WriteLine("Enter an option : ");
+                Console.WriteLine("\t+ : Add");
+                Console.WriteLine("\t- : Substract");
+                Console.WriteLine("\t* : Multiply");
+                Console.WriteLine("\t/ : Divide");
+                Console.Write("Enter a option : ");
+
+                switch (Console.ReadLine())
+                {
+                    case "+":
+                        result = num1 + num2;
+                        Console.WriteLine($"Your result : {num1} + {num2} = " + result);
+                        break;
+                    case "-":
+                        result = num1 - num2;
+                        Console.WriteLine($"Your result : {num1} - {num2} = " + result);
+                        break;
+                    case "*":
+                        result = num1 * num2;
+                        Console.WriteLine($"Your result : {num1} * {num2} = " + result);
+                        break;
+                    case "/":
+                        result = num1 / num2;
+                        Console.WriteLine($"Your result : {num1} / {num2} = " + result);
+                        break;
+                    default:
+                        Console.WriteLine("That was not a valid option.");
+                        break;
+                }
+                Console.WriteLine("Would you like to continue? (Y = yes, N = no) : ")
+            }
+            while (Console.ReadLine().ToUpper() == "Y");
+
+            Console.WriteLine("Bye!");
+
+
+            /*Random random = new Random();
             bool playAgain = true;
             String player;
             String computer;
@@ -110,7 +162,7 @@ namespace ConsoleApp2
                 }
             }
 
-            Console.WriteLine("Thanks for playing!");
+            Console.WriteLine("Thanks for playing!");*/
 
 
             /*Random random = new Random();
