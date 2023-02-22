@@ -14,6 +14,106 @@ namespace ConsoleApp2
         static void Main(string[] args)
         {
             Random random = new Random();
+            bool playAgain = true;
+            String player;
+            String computer;
+            String answer;
+
+            while (playAgain)
+            {
+                player = "";
+                computer = "";
+                answer = "";
+                
+                while (player != "ROCK" && player != "PAPER" && player != "SCISSOR")
+                {
+                    Console.Write("Enter ROCK, PAPER or SCISSOR : ");
+                    player = Console.ReadLine();
+                    player = player.ToUpper();
+
+                }
+
+                switch (random.Next(1, 4))
+                {
+                    case 1 :
+                        computer = "ROCK";
+                        break;
+                    case 2:
+                        computer = "PAPER";
+                        break;
+                    case 3:
+                        computer = "SCISSOR";
+                        break;
+                }
+
+                Console.WriteLine("Player : " + player);
+                Console.WriteLine("Computer : " + computer);
+
+                switch (player)
+                {
+                    case "ROCK":
+                        if (computer == "ROCK")
+                        {
+                            Console.WriteLine("Its's draw!");
+                        }
+                        else if (computer == "PAPER")
+                        {
+                            Console.WriteLine("You Lose!");
+                        }
+                        else
+                        {
+                            Console.WriteLine("You Win!");
+                        }
+                        break;
+
+                    case "PAPER":
+                        if (computer == "PAPER")
+                        {
+                            Console.WriteLine("Its's draw!");
+                        }
+                        else if (computer == "SCISSOR")
+                        {
+                            Console.WriteLine("You Lose!");
+                        }
+                        else
+                        {
+                            Console.WriteLine("You Win!");
+                        }
+                        break;
+                    case "SCISSOR":
+                        if (computer == "SCISSOR")
+                        {
+                            Console.WriteLine("Its's draw!");
+                        }
+                        else if (computer == "ROCK")
+                        {
+                            Console.WriteLine("You Lose!");
+                        }
+                        else
+                        {
+                            Console.WriteLine("You Win!");
+                        }
+                        break;
+                }
+
+                Console.WriteLine("Would you like to play again? (Y/N) : ");
+                answer = Console.ReadLine();
+                answer = answer.ToUpper();
+
+                if (answer == "Y")
+                {
+                    playAgain = true;
+                }
+                else
+                {
+                    playAgain = false;
+                }
+            }
+
+            Console.WriteLine("Thanks for playing!");
+
+
+            /*Random random = new Random();
 
             bool playAgain = true;
             int min = 1;
@@ -64,8 +164,8 @@ namespace ConsoleApp2
                 }
             }
 
-            Console.WriteLine("Thanks for playing! ... I guess");
-            
+            Console.WriteLine("Thanks for playing! ... I guess");*/
+
             /*int[,] arr = new int[2, 4];
 
             for (int i = 0; i < 2; i++)
@@ -85,8 +185,8 @@ namespace ConsoleApp2
                 }
                 Console.WriteLine("");
             }*/
-            
-            
+
+
             /*int[] numbers = new int[10];
             int i;
             int temp;
