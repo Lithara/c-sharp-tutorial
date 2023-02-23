@@ -1,0 +1,8 @@
+C:\Users\Dell\source\repos\Console1\Console1\bin\Debug\Console1.exe.config
+C:\Users\Dell\source\repos\Console1\Console1\bin\Debug\Console1.exe
+C:\Users\Dell\source\repos\Console1\Console1\bin\Debug\Console1.pdb
+C:\Users\Dell\source\repos\Console1\Console1\obj\Debug\Console1.csproj.AssemblyReference.cache
+C:\Users\Dell\source\repos\Console1\Console1\obj\Debug\Console1.csproj.SuggestedBindingRedirects.cache
+C:\Users\Dell\source\repos\Console1\Console1\obj\Debug\Console1.csproj.CoreCompileInputs.cache
+C:\Users\Dell\source\repos\Console1\Console1\obj\Debug\Console1.exe
+C:\Users\Dell\source\repos\Console1\Console1\obj\Debug\Console1.pdb
