@@ -10,12 +10,14 @@ namespace ConsoleApp3
     {
         static void Main(string[] args)
         {
-            double temperature = 20;
-            String message;
+            String firstName = "Lithara";
+            String lastName = "Perera";
 
-            message = (temperature >= 15) ? "It's warm outside!" : "It's cold outside!";
+            int age = 20;
 
-            Console.WriteLine(message);
+            Console.WriteLine("Hello! " + firstName + " " + lastName + ".");
+            Console.WriteLine($"Hello! {firstName} {lastName}.");
+            Console.WriteLine($"You're {age,-10} old.");
 
             Console.ReadKey();
         }
