@@ -10,22 +10,39 @@ namespace ConsoleApp3
     {
         static void Main(string[] args)
         {
-            double total = CheckOut(3.99, 5.75, 15);
+            int x;
+            int y;
+            double result;
 
-            Console.WriteLine(total);
-            Console.ReadLine();
-        }
-
-        static double CheckOut(params double[] prices)
-        {
-            double total = 0;
-
-            foreach (double price in prices)
+            try
             {
-                total += price;
-            }
+                Console.Write("Enter number 1 : ");
+                x = Convert.ToInt32(Console.ReadLine());
 
-            return total;
+                Console.Write("Enter number 2 : ");
+                y = Convert.ToInt32(Console.ReadLine());
+
+                result = x / y;
+
+                Console.WriteLine("result : " + result);
+            }
+            catch (FormatException e)
+            {
+                Console.WriteLine("Enter ONLY numbers PLEASE!");
+            }
+            catch (DivideByZeroException e)
+            {
+                Console.WriteLine("You can't divide by zero! IDIOT!");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Something went wrong!");
+            }
+            finally
+            {
+                Console.WriteLine("Thank you for visiting!");
+            }
+            Console.ReadKey();
         }
     }
 }
