@@ -10,38 +10,13 @@ namespace ConsoleApp3
     {
         static void Main(string[] args)
         {
-            int x;
-            int y;
-            double result;
+            double temperature = 20;
+            String message;
 
-            try
-            {
-                Console.Write("Enter number 1 : ");
-                x = Convert.ToInt32(Console.ReadLine());
+            message = (temperature >= 15) ? "It's warm outside!" : "It's cold outside!";
 
-                Console.Write("Enter number 2 : ");
-                y = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(message);
 
-                result = x / y;
-
-                Console.WriteLine("result : " + result);
-            }
-            catch (FormatException e)
-            {
-                Console.WriteLine("Enter ONLY numbers PLEASE!");
-            }
-            catch (DivideByZeroException e)
-            {
-                Console.WriteLine("You can't divide by zero! IDIOT!");
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Something went wrong!");
-            }
-            finally
-            {
-                Console.WriteLine("Thank you for visiting!");
-            }
             Console.ReadKey();
         }
     }
