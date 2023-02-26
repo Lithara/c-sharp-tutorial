@@ -10,36 +10,30 @@ namespace ConsoleApp3
     {
         static void Main(string[] args)
         {
-            Human human1 = new Human("Lithara",20);
-            Human human2 = new Human("Dihansa",21);
-
-            human1.Eat();
-            human1.Sleep();
-
-            human2.Eat();
-            human2.Sleep();
+            Car car1 = new Car("Ford", "Mustang", 2022, "red");
+            Car car2 = new Car("Chevy", "Corvett", 2021, "blue");
 
             Console.ReadKey();
         }
     }
-    class Human
+    class Car
     {
-        public string name;
-        public int age;
+        String make;
+        String model;
+        int year;
+        String color;
 
-        public Human(String name, int age)
+        public Car(string make, string model, int year, string color)
         {
-            this.name = name;
-            this.age = age;
+            this.make = make;
+            this.model = model;
+            this.year = year;
+            this.color = color;
         }
 
-        public void Eat()
+        public void Drive()
         {
-            Console.WriteLine(name + " is eating.");
-        }
-        public void Sleep()
-        {
-            Console.WriteLine(name + " is sleeping.");
+            Console.WriteLine("You drive the " + make + " " + model);
         }
     }
 }
