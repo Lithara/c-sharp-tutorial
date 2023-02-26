@@ -10,31 +10,50 @@ namespace ConsoleApp3
     {
         static void Main(string[] args)
         {
-            Car car1 = new Car("Mustang");
-            Car car2 = new Car("Corvett");
-            Car car3 = new Car("Lambo");
+            Pizza pizza = new Pizza("stuffed crust", "red sauce", "mozzarella");
 
-            Console.WriteLine(Car.numberOfCars);
 
-            Car.StartRace();
-
+            
             Console.ReadKey();
         }
     }
-    static class Car
+    class Pizza
     {
-        String model;
-        public static int numberOfCars;
+        String bread;
+        String sauce;
+        String cheese;
+        String topping;
 
-        public Car(String model)
+        public Pizza(string bread)
         {
-            this.model = model;
-            numberOfCars++;
+            this.bread = bread;
+            this.sauce = sauce;
+            this.cheese = cheese;
+            this.topping = topping;
         }
 
-        public static void StartRace()
+        public Pizza(string bread, string sauce)
         {
-            Console.WriteLine("The race has begun!");
+            this.bread = bread;
+            this.sauce = sauce;
+            this.cheese = cheese;
+            this.topping = topping;
+        }
+
+        public Pizza(string bread, string sauce, string cheese)
+        {
+            this.bread = bread;
+            this.sauce = sauce;
+            this.cheese = cheese;
+            this.topping = topping;
+        }
+
+        public Pizza(string bread, string sauce, string cheese, string topping)
+        {
+            this.bread = bread;
+            this.sauce = sauce;
+            this.cheese = cheese;
+            this.topping = topping;
         }
     }
 }
