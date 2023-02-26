@@ -10,23 +10,14 @@ namespace ConsoleApp3
     {
         static void Main(string[] args)
         {
-            Human human1 = new Human();
-            Human human2 = new Human();
-
-            human1.name = "Lithara";
-            human1.age = 20;
-
-            human2.name = "Dihansa";
-            human2.age = 21;
+            Human human1 = new Human("Lithara",20);
+            Human human2 = new Human("Dihansa",21);
 
             human1.Eat();
             human1.Sleep();
 
             human2.Eat();
             human2.Sleep();
-
-
-
 
             Console.ReadKey();
         }
@@ -35,6 +26,12 @@ namespace ConsoleApp3
     {
         public string name;
         public int age;
+
+        public Human(String name, int age)
+        {
+            this.name = name;
+            this.age = age;
+        }
 
         public void Eat()
         {
