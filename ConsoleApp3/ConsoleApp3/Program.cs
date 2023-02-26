@@ -10,16 +10,39 @@ namespace ConsoleApp3
     {
         static void Main(string[] args)
         {
-            String firstName = "Lithara";
-            String lastName = "Perera";
+            Human human1 = new Human();
+            Human human2 = new Human();
 
-            int age = 20;
+            human1.name = "Lithara";
+            human1.age = 20;
 
-            Console.WriteLine("Hello! " + firstName + " " + lastName + ".");
-            Console.WriteLine($"Hello! {firstName} {lastName}.");
-            Console.WriteLine($"You're {age,-10} old.");
+            human2.name = "Dihansa";
+            human2.age = 21;
+
+            human1.Eat();
+            human1.Sleep();
+
+            human2.Eat();
+            human2.Sleep();
+
+
+
 
             Console.ReadKey();
+        }
+    }
+    class Human
+    {
+        public string name;
+        public int age;
+
+        public void Eat()
+        {
+            Console.WriteLine(name + " is eating.");
+        }
+        public void Sleep()
+        {
+            Console.WriteLine(name + " is sleeping.");
         }
     }
 }
