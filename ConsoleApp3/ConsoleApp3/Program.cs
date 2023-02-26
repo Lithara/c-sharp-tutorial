@@ -16,10 +16,12 @@ namespace ConsoleApp3
 
             Console.WriteLine(Car.numberOfCars);
 
+            Car.StartRace();
+
             Console.ReadKey();
         }
     }
-    class Car
+    static class Car
     {
         String model;
         public static int numberOfCars;
@@ -28,6 +30,11 @@ namespace ConsoleApp3
         {
             this.model = model;
             numberOfCars++;
+        }
+
+        public static void StartRace()
+        {
+            Console.WriteLine("The race has begun!");
         }
     }
 }
