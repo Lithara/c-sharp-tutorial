@@ -10,30 +10,24 @@ namespace ConsoleApp3
     {
         static void Main(string[] args)
         {
-            Car car1 = new Car("Ford", "Mustang", 2022, "red");
-            Car car2 = new Car("Chevy", "Corvett", 2021, "blue");
+            Car car1 = new Car("Mustang");
+            Car car2 = new Car("Corvett");
+            Car car3 = new Car("Lambo");
+
+            Console.WriteLine(Car.numberOfCars);
 
             Console.ReadKey();
         }
     }
     class Car
     {
-        String make;
         String model;
-        int year;
-        String color;
+        public static int numberOfCars;
 
-        public Car(string make, string model, int year, string color)
+        public Car(String model)
         {
-            this.make = make;
             this.model = model;
-            this.year = year;
-            this.color = color;
-        }
-
-        public void Drive()
-        {
-            Console.WriteLine("You drive the " + make + " " + model);
+            numberOfCars++;
         }
     }
 }
