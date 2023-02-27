@@ -12,24 +12,12 @@ namespace ConsoleApp3
         {
             Car car = new Car();
             Bicycle bicycle = new Bicycle();
-            Boat boat = new Boat();
-
-            Console.WriteLine(car.speed);
-            Console.WriteLine(car.wheels);
-            car.go();
-
-            Console.WriteLine(bicycle.speed);
-            Console.WriteLine(bicycle.wheels);
-            bicycle.go();
-
-            Console.WriteLine(boat.speed);
-            Console.WriteLine(boat.wheels);
-            boat.go();
+            Boat bat = new Boat();
 
             Console.ReadKey();
         }
     }
-    class Vehicle
+    abstract class Vehicle
     {
         public int speed = 0;
 
@@ -41,13 +29,16 @@ namespace ConsoleApp3
     class Car : Vehicle
     {
         public int wheels = 4;
+        int maxSpeed = 500;
     }
     class Bicycle : Vehicle
     {
         public int wheels = 2;
+        int maxSpeed = 50;
     }
     class Boat : Vehicle
     {
         public int wheels = 0;
+        int maxSpeed = 100;
     }
 }
