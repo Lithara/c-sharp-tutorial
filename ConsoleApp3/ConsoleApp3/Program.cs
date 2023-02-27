@@ -12,11 +12,16 @@ namespace ConsoleApp3
         {
             Car car1 = new Car("Mustang", "red");
 
-            ChangeColor(car1, "silver");
+            Car car2 = Copy(car1);
 
             Console.WriteLine(car1.color + " " + car1.model);
 
             Console.ReadKey();
+        }
+
+        public static Car Copy(Car car)
+        {
+            return new Car(car.model, car.color);
         }
 
         public static void ChangeColor(Car car, String color)
