@@ -10,23 +10,29 @@ namespace ConsoleApp3
     {
         static void Main(string[] args)
         {
-            Car[] garage = { new Car("Mustang"), new Car("Corvett"), new Car("Lambo") };
+            Car car1 = new Car("Mustang", "red");
 
-            foreach(Car car in garage)
-            {
-                Console.WriteLine(car.model);
-            }
+            ChangeColor(car1, "silver");
+
+            Console.WriteLine(car1.color + " " + car1.model);
 
             Console.ReadKey();
+        }
+
+        public static void ChangeColor(Car car, String color)
+        {
+            car.color = color;
         }
     }
     class Car
     {
         public String model;
+        public String color;
 
-        public Car(String model)
+        public Car(String model, String color)
         {
             this.model = model;
+            this.color = color;
         }
     }
 }
