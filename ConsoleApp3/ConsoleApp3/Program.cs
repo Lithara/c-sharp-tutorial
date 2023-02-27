@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,34 +11,36 @@ namespace ConsoleApp3
     {
         static void Main(string[] args)
         {
-            Car car1 = new Car("Mustang", "red");
+            Dog dog = new Dog();
+            Cat cat = new Cat();
 
-            Car car2 = Copy(car1);
-
-            Console.WriteLine(car1.color + " " + car1.model);
+            dog.Speak;
+            cat.Speak;
 
             Console.ReadKey();
         }
-
-        public static Car Copy(Car car)
+    }
+    class Animal
+    {
+        public virtual void Speak()
         {
-            return new Car(car.model, car.color);
-        }
-
-        public static void ChangeColor(Car car, String color)
-        {
-            car.color = color;
+            Console.WriteLine("The animal goes *brrr*");
         }
     }
-    class Car
-    {
-        public String model;
-        public String color;
 
-        public Car(String model, String color)
+    class Dog : Animal
+    {
+        public override void Speak()
         {
-            this.model = model;
-            this.color = color;
+            Console.WriteLine("The dog goes *woof*");
+        }
+    }
+
+    class Cat : Animal
+    {
+        public override void Speak()
+        {
+            Console.WriteLine("The cat goes *meow*");
         }
     }
 }
