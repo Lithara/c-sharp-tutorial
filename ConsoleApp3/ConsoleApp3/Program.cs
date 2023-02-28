@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Common;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,36 +12,32 @@ namespace ConsoleApp3
     {
         static void Main(string[] args)
         {
-            Dog dog = new Dog();
-            Cat cat = new Cat();
+            //ToString() = converts an object to its string representation so that it is suitable for display
 
-            dog.Speak;
-            cat.Speak;
+            Car car = new Car("Chevy", "Corvette", 2022, "blue");
+
+            Console.WriteLine(car.ToString());
 
             Console.ReadKey();
         }
     }
-    class Animal
+    class Car
     {
-        public virtual void Speak()
-        {
-            Console.WriteLine("The animal goes *brrr*");
-        }
-    }
+        String make;
+        String model;
+        int year;
+        String color;
 
-    class Dog : Animal
-    {
-        public override void Speak()
+        public Car(String make, String model, int year, String color)
         {
-            Console.WriteLine("The dog goes *woof*");
+            this.make = make;
+            this.model = model;
+            this.year = year;
+            this.color = color;
         }
-    }
-
-    class Cat : Animal
-    {
-        public override void Speak()
+        public override string ToString()
         {
-            Console.WriteLine("The cat goes *meow*");
+            return "This is a " + make + " " + model;
         }
     }
 }
