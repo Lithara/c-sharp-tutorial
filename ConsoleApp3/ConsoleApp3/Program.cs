@@ -12,6 +12,12 @@ namespace ConsoleApp3
     {
         static void Main(string[] args)
         {
+            Student objStudent = new Student();
+
+            objStudent.MyFunction();
+            objStudent.MyInfo();
+
+            Console.WriteLine(objStudent.Sum);
 
             Console.ReadKey();
         }
